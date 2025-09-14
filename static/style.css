@@ -139,3 +139,22 @@ html, body {
     box-sizing: border-box;
 }
 }
+
+.stack {
+    display: flex;
+    gap: 1em;
+    margin: 1em 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tech-icon {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.2s;
+    border-radius: 8px;
+    background: white;
+    padding: 4px;
+}
+.tech-icon:hover {
+    transform: scale(1.12) rotate(-4deg);
+}
