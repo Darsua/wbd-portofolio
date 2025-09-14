@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
@@ -12,8 +12,7 @@ async def home():
 
 @app.get("/projects", response_class=HTMLResponse)
 async def projects():
-    with open("pages/projects.html") as f:
-        return f.read()
+    return RedirectResponse(url="https://github.com/Darsua?tab=repositories")
 
 @app.get("/contact", response_class=HTMLResponse)
 async def contact():
