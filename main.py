@@ -16,5 +16,4 @@ async def projects():
 
 @app.get("/contact", response_class=HTMLResponse)
 async def contact():
-    with open("pages/contact.html") as f:
-        return f.read()
+    return RedirectResponse(url="https://mail.google.com/mail/u/0/?to=darrelyanuar@gmail.com&tf=cm")
